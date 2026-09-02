@@ -1,0 +1,5 @@
+.env
+storage/covers/*
+!storage/covers/.gitkeep
+storage/exports/*
+!storage/exports/.gitkeep

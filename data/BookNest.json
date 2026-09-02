@@ -1,0 +1,1087 @@
+[
+  {
+    "id": 1,
+    "titulo": "1984",
+    "autor": "George Orwell"
+  },
+  {
+    "id": 2,
+    "titulo": "2024",
+    "autor": "Anna K. Franco"
+  },
+  {
+    "id": 3,
+    "titulo": "A Frankenstein se le fue la mano",
+    "autor": "Fabián Sevilla"
+  },
+  {
+    "id": 4,
+    "titulo": "A Scandal in Bohemia",
+    "autor": "Arthur Conan Doyle"
+  },
+  {
+    "id": 5,
+    "titulo": "Ajedrez: blancas juegan y ganan",
+    "autor": null
+  },
+  {
+    "id": 6,
+    "titulo": "Ajedrez: negras juegan y ganan",
+    "autor": null
+  },
+  {
+    "id": 7,
+    "titulo": "Alexis Zorba el griego",
+    "autor": "Nikos Kazantzakis"
+  },
+  {
+    "id": 8,
+    "titulo": "Amor sin fin",
+    "autor": "Ángeles Durini"
+  },
+  {
+    "id": 9,
+    "titulo": "Anales de la educación común: Adolescencia y juventud",
+    "autor": null
+  },
+  {
+    "id": 10,
+    "titulo": "Anales de la educación común: Nueva legislación educativa",
+    "autor": null
+  },
+  {
+    "id": 11,
+    "titulo": "Animales fantásticos y dónde encontrarlos",
+    "autor": "Newt Scamander/J. K. Rowling"
+  },
+  {
+    "id": 12,
+    "titulo": "Animales fantásticos y dónde encontrarlos — Estuche Biblioteca Hogwarts",
+    "autor": null
+  },
+  {
+    "id": 13,
+    "titulo": "Antología",
+    "autor": "J. L. Ortiz"
+  },
+  {
+    "id": 14,
+    "titulo": "Aprende rápidamente el japonés",
+    "autor": null
+  },
+  {
+    "id": 15,
+    "titulo": "Argumentos y teorías: aproximación a la epistemología",
+    "autor": "Carlos Asti Vera y Cristina Ambrosini"
+  },
+  {
+    "id": 16,
+    "titulo": "Assessing Network Security",
+    "autor": null
+  },
+  {
+    "id": 17,
+    "titulo": "Aventura Matemática 7",
+    "autor": null
+  },
+  {
+    "id": 18,
+    "titulo": "Aventuras de Arthur Gordon Pym",
+    "autor": "Edgar Allan Poe"
+  },
+  {
+    "id": 19,
+    "titulo": "Aventuras de tres rusos y tres ingleses en el África austral",
+    "autor": "Julio Verne"
+  },
+  {
+    "id": 20,
+    "titulo": "Batman: la historia y la leyenda",
+    "autor": null
+  },
+  {
+    "id": 21,
+    "titulo": "Bestias de la noche",
+    "autor": "Tochi Onyebuchi"
+  },
+  {
+    "id": 22,
+    "titulo": "Biología 3",
+    "autor": "Pasquali, Ancarola, De Marco y De Pasquale"
+  },
+  {
+    "id": 23,
+    "titulo": "Blancanieves y los siete enanos",
+    "autor": null
+  },
+  {
+    "id": 24,
+    "titulo": "Bootstrap",
+    "autor": null
+  },
+  {
+    "id": 25,
+    "titulo": "Botticelli — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 26,
+    "titulo": "Breve historia de mi vida",
+    "autor": "Stephen Hawking"
+  },
+  {
+    "id": 27,
+    "titulo": "Breves respuestas a las grandes preguntas",
+    "autor": "Stephen Hawking"
+  },
+  {
+    "id": 28,
+    "titulo": "Brevis Duplex: alemán-castellano / castellano-alemán",
+    "autor": null
+  },
+  {
+    "id": 29,
+    "titulo": "Buenos Aires es leyenda 4",
+    "autor": "G. Barrantes y V. Coviello"
+  },
+  {
+    "id": 30,
+    "titulo": "Ceremonia secreta",
+    "autor": "Marco Denevi"
+  },
+  {
+    "id": 31,
+    "titulo": "Ciencia, tecnología, innovación: políticas para América Latina",
+    "autor": "Francisco Sagasti (referencia)"
+  },
+  {
+    "id": 32,
+    "titulo": "Ciencia: El desafío de las preguntas para mentes curiosas",
+    "autor": null
+  },
+  {
+    "id": 33,
+    "titulo": "Ciencia: un camino entre continuidades y rupturas",
+    "autor": "Nair Teresa Guiber (ed.)"
+  },
+  {
+    "id": 34,
+    "titulo": "Cinco niños y eso",
+    "autor": "E. Nesbit"
+  },
+  {
+    "id": 35,
+    "titulo": "Código Génesis",
+    "autor": "John Case"
+  },
+  {
+    "id": 36,
+    "titulo": "Cómo aprende el cerebro",
+    "autor": "David A. Sousa"
+  },
+  {
+    "id": 37,
+    "titulo": "Cómo concursar cargos directivos y de supervisión",
+    "autor": "Sandra Sánchez y Néstor Zorzoli"
+  },
+  {
+    "id": 38,
+    "titulo": "Cómo controlar sus gastos generales",
+    "autor": "Rupert Booth"
+  },
+  {
+    "id": 39,
+    "titulo": "Constitución de la Nación Argentina",
+    "autor": null
+  },
+  {
+    "id": 40,
+    "titulo": "Construcción de liderazgos",
+    "autor": "Ruth Harf y Delia Azzerboni"
+  },
+  {
+    "id": 41,
+    "titulo": "Contact",
+    "autor": "Carl Sagan"
+  },
+  {
+    "id": 42,
+    "titulo": "Criptonomicón",
+    "autor": "Neal Stephenson"
+  },
+  {
+    "id": 43,
+    "titulo": "Crítica de las razones de educar",
+    "autor": "Carlos Cullen"
+  },
+  {
+    "id": 44,
+    "titulo": "Crónicas marcianas",
+    "autor": "Ray Bradbury"
+  },
+  {
+    "id": 45,
+    "titulo": "Cuentos para seguir creciendo: para los estudiantes que terminan la Educación Básica",
+    "autor": null
+  },
+  {
+    "id": 46,
+    "titulo": "Dagón y otros cuentos",
+    "autor": "H. P. Lovecraft"
+  },
+  {
+    "id": 47,
+    "titulo": "Delacroix — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 48,
+    "titulo": "Deseo consumido",
+    "autor": "Soledad M. Vallejos y Evangelina Himitian"
+  },
+  {
+    "id": 49,
+    "titulo": "Diccionario básico español-francés / francés-español",
+    "autor": null
+  },
+  {
+    "id": 50,
+    "titulo": "Diccionario de sinónimos y gramática Óptimo, A–H — vol. 62",
+    "autor": null
+  },
+  {
+    "id": 51,
+    "titulo": "Diccionario de sinónimos y gramática Óptimo, I–Z — vol. 63",
+    "autor": null
+  },
+  {
+    "id": 52,
+    "titulo": "Diccionario Pocket Larousse",
+    "autor": null
+  },
+  {
+    "id": 53,
+    "titulo": "Dracula",
+    "autor": "Bram Stoker"
+  },
+  {
+    "id": 54,
+    "titulo": "Drácula",
+    "autor": "Bram Stoker"
+  },
+  {
+    "id": 55,
+    "titulo": "Edipo Rey / Antígona",
+    "autor": "Sófocles"
+  },
+  {
+    "id": 56,
+    "titulo": "El anillo encantado",
+    "autor": "María Teresa Andruetto"
+  },
+  {
+    "id": 57,
+    "titulo": "El archivo de Sherlock Holmes",
+    "autor": null
+  },
+  {
+    "id": 58,
+    "titulo": "El arte de ganar",
+    "autor": "Jaime Durán Barba y Santiago Nieto"
+  },
+  {
+    "id": 59,
+    "titulo": "El asesinato de Pitágoras",
+    "autor": "Marcos Chicot"
+  },
+  {
+    "id": 60,
+    "titulo": "El bastón de plata",
+    "autor": "Martín Blasco"
+  },
+  {
+    "id": 61,
+    "titulo": "El bosque que desaparecía",
+    "autor": "Sarah Dixon"
+  },
+  {
+    "id": 62,
+    "titulo": "El caso del robo al correo",
+    "autor": "Jorge Grubissich"
+  },
+  {
+    "id": 63,
+    "titulo": "El castillo impenetrable",
+    "autor": "Jesús Ballaz"
+  },
+  {
+    "id": 64,
+    "titulo": "El cerebro del consumo",
+    "autor": "Federico Fros Campelo"
+  },
+  {
+    "id": 65,
+    "titulo": "El club de los psicópatas",
+    "autor": "John Katzenbach"
+  },
+  {
+    "id": 66,
+    "titulo": "El desarrollo curricular",
+    "autor": null
+  },
+  {
+    "id": 67,
+    "titulo": "El escarabajo de oro",
+    "autor": "Edgar Allan Poe"
+  },
+  {
+    "id": 68,
+    "titulo": "El fantasma de la mansión",
+    "autor": "William Alexander (referencia)"
+  },
+  {
+    "id": 69,
+    "titulo": "El fin de la infancia",
+    "autor": "Arthur C. Clarke"
+  },
+  {
+    "id": 70,
+    "titulo": "El hombre en el castillo",
+    "autor": "Philip K. Dick"
+  },
+  {
+    "id": 71,
+    "titulo": "El hombre que perseguía su sombra",
+    "autor": "David Lagercrantz"
+  },
+  {
+    "id": 72,
+    "titulo": "El inventor",
+    "autor": "Ricardo Mariño"
+  },
+  {
+    "id": 73,
+    "titulo": "El ladrón del siglo",
+    "autor": "Luis Mario Vitette"
+  },
+  {
+    "id": 74,
+    "titulo": "El libro de lectura del Bicentenario — edición verde",
+    "autor": null
+  },
+  {
+    "id": 75,
+    "titulo": "El libro de lectura del Bicentenario — edición violeta, ejemplar diferente",
+    "autor": null
+  },
+  {
+    "id": 76,
+    "titulo": "El número Omega",
+    "autor": "Gregory Chaitin"
+  },
+  {
+    "id": 77,
+    "titulo": "El oro del lugar",
+    "autor": "Mariano Fiszman"
+  },
+  {
+    "id": 78,
+    "titulo": "El patito feo",
+    "autor": null
+  },
+  {
+    "id": 79,
+    "titulo": "El príncipe",
+    "autor": "Nicolás Maquiavelo"
+  },
+  {
+    "id": 80,
+    "titulo": "El regreso de Sherlock Holmes",
+    "autor": null
+  },
+  {
+    "id": 81,
+    "titulo": "El sabueso de los Baskerville",
+    "autor": null
+  },
+  {
+    "id": 82,
+    "titulo": "El testamento de un excéntrico",
+    "autor": "Julio Verne"
+  },
+  {
+    "id": 83,
+    "titulo": "El tiempo vuela",
+    "autor": "Diana Briones"
+  },
+  {
+    "id": 84,
+    "titulo": "El túnel",
+    "autor": "Ernesto Sabato"
+  },
+  {
+    "id": 85,
+    "titulo": "El último mohicano — vol. 11",
+    "autor": "James F. Cooper"
+  },
+  {
+    "id": 86,
+    "titulo": "El valle del terror",
+    "autor": null
+  },
+  {
+    "id": 87,
+    "titulo": "El viejo vecindario",
+    "autor": "Avery Corman"
+  },
+  {
+    "id": 88,
+    "titulo": "El vuelo del dragón",
+    "autor": "Anne McCaffrey"
+  },
+  {
+    "id": 89,
+    "titulo": "Elegida por la Luna",
+    "autor": "P. C. Cast"
+  },
+  {
+    "id": 90,
+    "titulo": "Estudio en escarlata / El signo de los cuatro",
+    "autor": null
+  },
+  {
+    "id": 91,
+    "titulo": "Fahrenheit 451",
+    "autor": "Ray Bradbury"
+  },
+  {
+    "id": 92,
+    "titulo": "Frankenstein",
+    "autor": "Mary W. Shelley"
+  },
+  {
+    "id": 93,
+    "titulo": "Gestionar es hacer… que las cosas sucedan",
+    "autor": "Bernardo Blejmar"
+  },
+  {
+    "id": 94,
+    "titulo": "Hacer Matemática 2/3",
+    "autor": null
+  },
+  {
+    "id": 95,
+    "titulo": "Hacia las estrellas",
+    "autor": "Carlo Davide Cenadelli"
+  },
+  {
+    "id": 96,
+    "titulo": "Hackers en Linux y Unix",
+    "autor": null
+  },
+  {
+    "id": 97,
+    "titulo": "Harry Potter and the Chamber of Secrets",
+    "autor": "J. K. Rowling"
+  },
+  {
+    "id": 98,
+    "titulo": "Harry Potter and the Philosopher’s Stone",
+    "autor": "J. K. Rowling"
+  },
+  {
+    "id": 99,
+    "titulo": "Harry Potter and the Prisoner of Azkaban",
+    "autor": "J. K. Rowling"
+  },
+  {
+    "id": 100,
+    "titulo": "Heisenberg: El principio de incertidumbre",
+    "autor": null
+  },
+  {
+    "id": 101,
+    "titulo": "Historias grotescas y serias",
+    "autor": "Edgar Allan Poe"
+  },
+  {
+    "id": 102,
+    "titulo": "Historias ocultas en la Recoleta",
+    "autor": "María Rosa Lojo y Roberto L. Elissalde"
+  },
+  {
+    "id": 103,
+    "titulo": "Hombres y mujeres que hicieron historia",
+    "autor": "Volumen de la colección; el personaje no se alcanza a leer"
+  },
+  {
+    "id": 104,
+    "titulo": "Insomnia",
+    "autor": "Stephen King"
+  },
+  {
+    "id": 105,
+    "titulo": "IPC: Guía de estudio",
+    "autor": null
+  },
+  {
+    "id": 106,
+    "titulo": "Juegos de construcción y construcción del conocimiento",
+    "autor": null
+  },
+  {
+    "id": 107,
+    "titulo": "La bailarina de Auschwitz",
+    "autor": "Edith Eger"
+  },
+  {
+    "id": 108,
+    "titulo": "La bella durmiente",
+    "autor": null
+  },
+  {
+    "id": 109,
+    "titulo": "La bella y la bestia",
+    "autor": null
+  },
+  {
+    "id": 110,
+    "titulo": "La casa de la viuda",
+    "autor": "Norma Huidobro"
+  },
+  {
+    "id": 111,
+    "titulo": "La chica que soñaba con una cerilla y un bidón de gasolina",
+    "autor": "Stieg Larsson"
+  },
+  {
+    "id": 112,
+    "titulo": "La chica que vivió dos veces",
+    "autor": "David Lagercrantz"
+  },
+  {
+    "id": 113,
+    "titulo": "La complejidad de la gestión escolar",
+    "autor": "Ingrid Sverdlick y otras"
+  },
+  {
+    "id": 114,
+    "titulo": "La cuestión criminal",
+    "autor": "Eugenio Raúl Zaffaroni"
+  },
+  {
+    "id": 115,
+    "titulo": "La formación universitaria para el sistema educativo y el sector productivo",
+    "autor": null
+  },
+  {
+    "id": 116,
+    "titulo": "La invención de Morel",
+    "autor": "Adolfo Bioy Casares"
+  },
+  {
+    "id": 117,
+    "titulo": "La leyenda de Robin Hood",
+    "autor": "Howard Pyle"
+  },
+  {
+    "id": 118,
+    "titulo": "La leyenda del rey Arturo",
+    "autor": "Anónimo"
+  },
+  {
+    "id": 119,
+    "titulo": "La mano izquierda de la oscuridad",
+    "autor": "Ursula K. Le Guin"
+  },
+  {
+    "id": 120,
+    "titulo": "La máquina del tiempo — vol. 28",
+    "autor": "H. G. Wells"
+  },
+  {
+    "id": 121,
+    "titulo": "La máquina del tiempo",
+    "autor": "H. G. Wells"
+  },
+  {
+    "id": 122,
+    "titulo": "La naranja mecánica",
+    "autor": "Anthony Burgess"
+  },
+  {
+    "id": 123,
+    "titulo": "La política en el siglo XXI",
+    "autor": "Jaime Durán Barba y Santiago Nieto"
+  },
+  {
+    "id": 124,
+    "titulo": "La princesa y el chícharo",
+    "autor": null
+  },
+  {
+    "id": 125,
+    "titulo": "La reina en el palacio de las corrientes de aire",
+    "autor": "Stieg Larsson"
+  },
+  {
+    "id": 126,
+    "titulo": "La rueda celeste",
+    "autor": "Ursula K. Le Guin"
+  },
+  {
+    "id": 127,
+    "titulo": "La vida secreta de la mente",
+    "autor": "Mariano Sigman"
+  },
+  {
+    "id": 128,
+    "titulo": "La visita del inspector",
+    "autor": "J. B. Priestley"
+  },
+  {
+    "id": 129,
+    "titulo": "Las aventuras de Sherlock Holmes",
+    "autor": null
+  },
+  {
+    "id": 130,
+    "titulo": "Las garras del águila",
+    "autor": "Karin Smirnoff"
+  },
+  {
+    "id": 131,
+    "titulo": "Las memorias de Sherlock Holmes",
+    "autor": null
+  },
+  {
+    "id": 132,
+    "titulo": "Las neurociencias — El Gato y La Caja",
+    "autor": "Marcos Aramburu"
+  },
+  {
+    "id": 133,
+    "titulo": "Las plantas y el ocultismo",
+    "autor": null
+  },
+  {
+    "id": 134,
+    "titulo": "Las sirenas de Titán",
+    "autor": "Kurt Vonnegut"
+  },
+  {
+    "id": 135,
+    "titulo": "Lecciones de liderazgo creativo",
+    "autor": "Robert Iger"
+  },
+  {
+    "id": 136,
+    "titulo": "Lo que no te mata te hace más fuerte",
+    "autor": "David Lagercrantz"
+  },
+  {
+    "id": 137,
+    "titulo": "Los cuentos de Beedle el Bardo — Estuche Biblioteca Hogwarts",
+    "autor": null
+  },
+  {
+    "id": 138,
+    "titulo": "Los hombres que no amaban a las mujeres",
+    "autor": "Stieg Larsson"
+  },
+  {
+    "id": 139,
+    "titulo": "Los límites, un mensaje de cuidado",
+    "autor": "Claudia Ester Gerstenhaber"
+  },
+  {
+    "id": 140,
+    "titulo": "Los vecinos mueren en las novelas",
+    "autor": "Sergio Aguirre"
+  },
+  {
+    "id": 141,
+    "titulo": "Management en 1 minuto",
+    "autor": "Mariela Skef"
+  },
+  {
+    "id": 142,
+    "titulo": "Matemática 3 ES — colección Confluencias",
+    "autor": null
+  },
+  {
+    "id": 143,
+    "titulo": "Matemática [5] ES — colección Huellas",
+    "autor": null
+  },
+  {
+    "id": 144,
+    "titulo": "Matemática: De la práctica a la formalización 1",
+    "autor": null
+  },
+  {
+    "id": 145,
+    "titulo": "Maus I",
+    "autor": "Art Spiegelman"
+  },
+  {
+    "id": 146,
+    "titulo": "Max Planck: La teoría cuántica",
+    "autor": null
+  },
+  {
+    "id": 147,
+    "titulo": "Mejorar la escuela",
+    "autor": "Silvina Gvirtz y María Eugenia de Podestá (comps.)"
+  },
+  {
+    "id": 148,
+    "titulo": "Mejorar la gestión directiva en la escuela",
+    "autor": "S. Gvirtz y M. E. de Podestá (comps.)"
+  },
+  {
+    "id": 149,
+    "titulo": "Miguel Ángel — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 150,
+    "titulo": "Narrativa del maestro del terror",
+    "autor": "Edgar Allan Poe"
+  },
+  {
+    "id": 151,
+    "titulo": "Neuromante",
+    "autor": "William Gibson"
+  },
+  {
+    "id": 152,
+    "titulo": "Newton: La ley de la gravedad",
+    "autor": null
+  },
+  {
+    "id": 153,
+    "titulo": "Nunca más",
+    "autor": "CONADEP"
+  },
+  {
+    "id": 154,
+    "titulo": "Obras completas — vol. 59",
+    "autor": "Autor no legible"
+  },
+  {
+    "id": 155,
+    "titulo": "Organizaciones",
+    "autor": "J. J. Ader y otros"
+  },
+  {
+    "id": 156,
+    "titulo": "Para qué sirve la escuela",
+    "autor": "Daniel Filmus"
+  },
+  {
+    "id": 157,
+    "titulo": "Pedagogía de la autonomía",
+    "autor": "Paulo Freire"
+  },
+  {
+    "id": 158,
+    "titulo": "Poemas en prosa / Poemas humanos / España, aparta de mí este cáliz",
+    "autor": "César Vallejo"
+  },
+  {
+    "id": 159,
+    "titulo": "Poemas para niños",
+    "autor": "Elsa Isabel Bornemann"
+  },
+  {
+    "id": 160,
+    "titulo": "Poemas para niños",
+    "autor": "José Sebastián Tallón"
+  },
+  {
+    "id": 161,
+    "titulo": "Poemas para niños",
+    "autor": "Federico García Lorca"
+  },
+  {
+    "id": 162,
+    "titulo": "Poemas para niños",
+    "autor": "Rafael Alberti"
+  },
+  {
+    "id": 163,
+    "titulo": "Poemas para niños",
+    "autor": "Fryda Schultz de Mantovani"
+  },
+  {
+    "id": 164,
+    "titulo": "Poemas para niños",
+    "autor": "María Elena Walsh"
+  },
+  {
+    "id": 165,
+    "titulo": "Poemas para niños",
+    "autor": "Pedro Juan Vignale"
+  },
+  {
+    "id": 166,
+    "titulo": "Poemas para niños",
+    "autor": "María Hortensia Lacau"
+  },
+  {
+    "id": 167,
+    "titulo": "Prácticas pedagógicas de evaluación en el nivel inicial",
+    "autor": "Elisa Spakowsky"
+  },
+  {
+    "id": 168,
+    "titulo": "Pulgarcita",
+    "autor": null
+  },
+  {
+    "id": 169,
+    "titulo": "Pulgarcito",
+    "autor": null
+  },
+  {
+    "id": 170,
+    "titulo": "Qué es la inteligencia artificial y cómo impacta en nuestras vidas",
+    "autor": "Melisa Avolio"
+  },
+  {
+    "id": 171,
+    "titulo": "Qué es la seguridad informática",
+    "autor": "Hugo D. Scolnik"
+  },
+  {
+    "id": 172,
+    "titulo": "Quidditch a través de los tiempos",
+    "autor": "Kennilworthy Whisp/J. K. Rowling"
+  },
+  {
+    "id": 173,
+    "titulo": "Quidditch a través de los tiempos — Estuche Biblioteca Hogwarts",
+    "autor": null
+  },
+  {
+    "id": 174,
+    "titulo": "Quiero escapar de Brigitte",
+    "autor": "Eduardo Abel Gimenez"
+  },
+  {
+    "id": 175,
+    "titulo": "Rafael — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 176,
+    "titulo": "Renoir — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 177,
+    "titulo": "Responsabilidad y prevención en establecimientos educativos",
+    "autor": "Marcela A. Angriman"
+  },
+  {
+    "id": 178,
+    "titulo": "Ricardo III / Enrique V",
+    "autor": "William Shakespeare"
+  },
+  {
+    "id": 179,
+    "titulo": "Robinson Crusoe",
+    "autor": "Daniel Defoe"
+  },
+  {
+    "id": 180,
+    "titulo": "Robinson Crusoe — vol. 10",
+    "autor": "Daniel Defoe"
+  },
+  {
+    "id": 181,
+    "titulo": "Robots — colección Ciencia que ladra…",
+    "autor": null
+  },
+  {
+    "id": 182,
+    "titulo": "Romeo y Julieta — vol. 7",
+    "autor": "William Shakespeare"
+  },
+  {
+    "id": 183,
+    "titulo": "S.O.S. alergia alimentaria: guía de supervivencia",
+    "autor": "Gustavo Marino y Silvia Smid (referencia)"
+  },
+  {
+    "id": 184,
+    "titulo": "Sargento Kirk / Ernie Pike — volumen 3",
+    "autor": "H. G. Oesterheld y Hugo Pratt"
+  },
+  {
+    "id": 185,
+    "titulo": "Schrödinger: Las paradojas cuánticas",
+    "autor": null
+  },
+  {
+    "id": 186,
+    "titulo": "Shunko",
+    "autor": "Jorge W. Ábalos"
+  },
+  {
+    "id": 187,
+    "titulo": "Silverlight: descubra un nuevo nivel en el desarrollo de aplicaciones para Internet",
+    "autor": null
+  },
+  {
+    "id": 188,
+    "titulo": "Sinceramente",
+    "autor": "Cristina Fernández de Kirchner"
+  },
+  {
+    "id": 189,
+    "titulo": "Sociedad y Estado en un mundo globalizado",
+    "autor": null
+  },
+  {
+    "id": 190,
+    "titulo": "Soy leyenda",
+    "autor": "Richard Matheson"
+  },
+  {
+    "id": 191,
+    "titulo": "Spider-Man: El otro",
+    "autor": null
+  },
+  {
+    "id": 192,
+    "titulo": "Su última reverencia",
+    "autor": null
+  },
+  {
+    "id": 193,
+    "titulo": "Sueño de una noche de verano / Las alegres comadres de Windsor",
+    "autor": "William Shakespeare"
+  },
+  {
+    "id": 194,
+    "titulo": "Super Mario: Todo empezó con Mario",
+    "autor": null
+  },
+  {
+    "id": 195,
+    "titulo": "Superman — volumen 12",
+    "autor": "Siegel y Shuster"
+  },
+  {
+    "id": 196,
+    "titulo": "Terror en la red",
+    "autor": "Greg Iles"
+  },
+  {
+    "id": 197,
+    "titulo": "The Art of Computer Programming, vol. 1: Fundamental Algorithms",
+    "autor": "Donald E. Knuth"
+  },
+  {
+    "id": 198,
+    "titulo": "The Art of Computer Programming, vol. 2: Seminumerical Algorithms",
+    "autor": "Donald E. Knuth"
+  },
+  {
+    "id": 199,
+    "titulo": "The Art of Computer Programming, vol. 3: Sorting and Searching",
+    "autor": "Donald E. Knuth"
+  },
+  {
+    "id": 200,
+    "titulo": "The Art of Computer Programming, vol. 4A: Combinatorial Algorithms, Part 1",
+    "autor": "Donald E. Knuth"
+  },
+  {
+    "id": 201,
+    "titulo": "The Brethren",
+    "autor": "John Grisham"
+  },
+  {
+    "id": 202,
+    "titulo": "The Dragon Reborn",
+    "autor": "Robert Jordan"
+  },
+  {
+    "id": 203,
+    "titulo": "The Eye of the World",
+    "autor": "Robert Jordan"
+  },
+  {
+    "id": 204,
+    "titulo": "The Great Hunt",
+    "autor": "Robert Jordan"
+  },
+  {
+    "id": 205,
+    "titulo": "The Partner",
+    "autor": "John Grisham"
+  },
+  {
+    "id": 206,
+    "titulo": "The Princeton Companion to Mathematics",
+    "autor": "Timothy Gowers (ed.)"
+  },
+  {
+    "id": 207,
+    "titulo": "The Speckled Band and Other Stories",
+    "autor": "Sir Arthur Conan Doyle"
+  },
+  {
+    "id": 208,
+    "titulo": "Tiburón II",
+    "autor": "Hank Searls"
+  },
+  {
+    "id": 209,
+    "titulo": "Toulouse-Lautrec — Colección Grandes pintores",
+    "autor": null
+  },
+  {
+    "id": 210,
+    "titulo": "Trilogía del Imperio",
+    "autor": "Isaac Asimov"
+  },
+  {
+    "id": 211,
+    "titulo": "Twenty Thousand Leagues Under the Sea",
+    "autor": "Jules Verne"
+  },
+  {
+    "id": 212,
+    "titulo": "Un mundo feliz",
+    "autor": "Aldous Huxley"
+  },
+  {
+    "id": 213,
+    "titulo": "Una vida difícil / Judith y las rosas",
+    "autor": "Conrado Nalé Roxlo"
+  },
+  {
+    "id": 214,
+    "titulo": "Una visita inesperada",
+    "autor": "Sonya Hartnett"
+  },
+  {
+    "id": 215,
+    "titulo": "Viaje al centro de la Tierra",
+    "autor": "Julio Verne"
+  },
+  {
+    "id": 216,
+    "titulo": "Winning Arguments",
+    "autor": "Jay Heinrichs"
+  },
+  {
+    "id": 217,
+    "titulo": "Zelda: La saga más innovadora",
+    "autor": null
+  }
+]

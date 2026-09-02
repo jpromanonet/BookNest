@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 180" fill="none">
+  <rect width="120" height="180" fill="#E8DDCB"/>
+  <rect x="2" y="2" width="116" height="176" fill="none" stroke="#6E626A" stroke-width="2"/>
+  <rect x="4" y="4" width="112" height="172" fill="none" stroke="#6E626A" stroke-width="1" opacity="0.4"/>
+  <!-- pixel book icon (scaled 3x from 16x16) -->
+  <rect x="42" y="48" width="6" height="30" fill="#403845"/>
+  <rect x="48" y="48" width="24" height="3" fill="#403845"/>
+  <rect x="48" y="75" width="24" height="3" fill="#403845"/>
+  <rect x="48" y="51" width="3" height="24" fill="#403845"/>
+  <rect x="69" y="51" width="3" height="24" fill="#403845"/>
+  <rect x="51" y="57" width="15" height="3" fill="#403845"/>
+  <rect x="51" y="63" width="15" height="3" fill="#403845"/>
+  <rect x="51" y="69" width="12" height="3" fill="#403845"/>
+  <text x="60" y="110" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#6E626A" letter-spacing="1">NO COVER</text>
+</svg>

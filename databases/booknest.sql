@@ -1,0 +1,173 @@
+-- BookNest v0.1 schema
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+CREATE TABLE IF NOT EXISTS authors (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  biography TEXT NULL,
+  nationality VARCHAR(120) NULL,
+  birth_date DATE NULL,
+  death_date DATE NULL,
+  notes TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_authors_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS publishers (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  notes TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_publishers_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS works (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  notes TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS collections (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT NULL,
+  expected_volumes INT UNSIGNED NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_collections_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS series (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  description TEXT NULL,
+  expected_volumes INT UNSIGNED NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_series_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS genres (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  UNIQUE KEY uq_genres_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS tags (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  UNIQUE KEY uq_tags_name (name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS books (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  work_id INT UNSIGNED NULL,
+  title VARCHAR(255) NOT NULL,
+  subtitle VARCHAR(255) NULL,
+  isbn10 VARCHAR(20) NULL,
+  isbn13 VARCHAR(20) NULL,
+  publisher_id INT UNSIGNED NULL,
+  publication_date DATE NULL,
+  publication_year SMALLINT NULL,
+  edition VARCHAR(120) NULL,
+  volume VARCHAR(60) NULL,
+  collection_id INT UNSIGNED NULL,
+  series_id INT UNSIGNED NULL,
+  series_number DECIMAL(6,2) NULL,
+  language VARCHAR(80) NULL,
+  pages INT UNSIGNED NULL,
+  format VARCHAR(80) NULL,
+  description TEXT NULL,
+  physical_condition VARCHAR(40) NOT NULL DEFAULT 'good',
+  reading_status VARCHAR(40) NOT NULL DEFAULT 'unread',
+  cover VARCHAR(255) NULL,
+  goodreads_url VARCHAR(500) NULL,
+  purchase_date DATE NULL,
+  purchase_price DECIMAL(12,2) NULL,
+  purchase_place VARCHAR(255) NULL,
+  estimated_value DECIMAL(12,2) NULL,
+  rating TINYINT UNSIGNED NULL,
+  reading_started_at DATE NULL,
+  reading_finished_at DATE NULL,
+  reading_comment TEXT NULL,
+  notes TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  KEY idx_books_title (title),
+  KEY idx_books_isbn13 (isbn13),
+  KEY idx_books_isbn10 (isbn10),
+  KEY idx_books_year (publication_year),
+  KEY idx_books_reading (reading_status),
+  KEY idx_books_condition (physical_condition),
+  KEY idx_books_language (language),
+  CONSTRAINT fk_books_work FOREIGN KEY (work_id) REFERENCES works(id) ON DELETE SET NULL,
+  CONSTRAINT fk_books_publisher FOREIGN KEY (publisher_id) REFERENCES publishers(id) ON DELETE SET NULL,
+  CONSTRAINT fk_books_collection FOREIGN KEY (collection_id) REFERENCES collections(id) ON DELETE SET NULL,
+  CONSTRAINT fk_books_series FOREIGN KEY (series_id) REFERENCES series(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS book_authors (
+  book_id INT UNSIGNED NOT NULL,
+  author_id INT UNSIGNED NOT NULL,
+  role VARCHAR(60) NOT NULL DEFAULT 'author',
+  sort_order SMALLINT UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (book_id, author_id),
+  CONSTRAINT fk_ba_book FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
+  CONSTRAINT fk_ba_author FOREIGN KEY (author_id) REFERENCES authors(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS book_genres (
+  book_id INT UNSIGNED NOT NULL,
+  genre_id INT UNSIGNED NOT NULL,
+  PRIMARY KEY (book_id, genre_id),
+  CONSTRAINT fk_bg_book FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
+  CONSTRAINT fk_bg_genre FOREIGN KEY (genre_id) REFERENCES genres(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS book_tags (
+  book_id INT UNSIGNED NOT NULL,
+  tag_id INT UNSIGNED NOT NULL,
+  PRIMARY KEY (book_id, tag_id),
+  CONSTRAINT fk_bt_book FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
+  CONSTRAINT fk_bt_tag FOREIGN KEY (tag_id) REFERENCES tags(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS wishlist (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  author VARCHAR(255) NULL,
+  isbn VARCHAR(20) NULL,
+  desired_edition VARCHAR(120) NULL,
+  publisher VARCHAR(255) NULL,
+  priority TINYINT UNSIGNED NOT NULL DEFAULT 3,
+  found_price DECIMAL(12,2) NULL,
+  store VARCHAR(255) NULL,
+  url VARCHAR(500) NULL,
+  notes TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS reading_history (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  book_id INT UNSIGNED NOT NULL,
+  status VARCHAR(40) NOT NULL,
+  started_at DATE NULL,
+  finished_at DATE NULL,
+  rating TINYINT UNSIGNED NULL,
+  comment TEXT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  CONSTRAINT fk_rh_book FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS settings (
+  setting_key VARCHAR(120) PRIMARY KEY,
+  setting_value TEXT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+SET FOREIGN_KEY_CHECKS = 1;

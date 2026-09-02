@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <pattern id="parchment" x="0" y="0" width="64" height="64" patternUnits="userSpaceOnUse">
+      <rect width="64" height="64" fill="#E8DDCB"/>
+      <!-- subtle grain -->
+      <rect x="8" y="4" width="1" height="1" fill="#6E626A" opacity="0.06"/>
+      <rect x="24" y="12" width="1" height="1" fill="#6E626A" opacity="0.05"/>
+      <rect x="40" y="8" width="1" height="1" fill="#6E626A" opacity="0.07"/>
+      <rect x="56" y="20" width="1" height="1" fill="#6E626A" opacity="0.05"/>
+      <rect x="12" y="28" width="1" height="1" fill="#6E626A" opacity="0.06"/>
+      <rect x="32" y="32" width="1" height="1" fill="#6E626A" opacity="0.05"/>
+      <rect x="48" y="36" width="1" height="1" fill="#6E626A" opacity="0.06"/>
+      <rect x="4" y="44" width="1" height="1" fill="#6E626A" opacity="0.05"/>
+      <rect x="20" y="52" width="1" height="1" fill="#6E626A" opacity="0.07"/>
+      <rect x="36" y="48" width="1" height="1" fill="#6E626A" opacity="0.05"/>
+      <rect x="52" y="56" width="1" height="1" fill="#6E626A" opacity="0.06"/>
+      <!-- tiny stars -->
+      <rect x="16" y="16" width="1" height="1" fill="#403845" opacity="0.08"/>
+      <rect x="15" y="17" width="3" height="1" fill="#403845" opacity="0.06"/>
+      <rect x="16" y="15" width="1" height="3" fill="#403845" opacity="0.06"/>
+      <rect x="44" y="24" width="1" height="1" fill="#403845" opacity="0.07"/>
+      <rect x="43" y="25" width="3" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="44" y="23" width="1" height="3" fill="#403845" opacity="0.05"/>
+      <rect x="8" y="56" width="1" height="1" fill="#403845" opacity="0.06"/>
+      <rect x="7" y="57" width="3" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="8" y="55" width="1" height="3" fill="#403845" opacity="0.05"/>
+      <rect x="56" y="40" width="1" height="1" fill="#403845" opacity="0.07"/>
+      <rect x="55" y="41" width="3" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="56" y="39" width="1" height="3" fill="#403845" opacity="0.05"/>
+      <!-- tiny runes -->
+      <rect x="28" y="6" width="1" height="3" fill="#403845" opacity="0.06"/>
+      <rect x="27" y="7" width="3" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="28" y="8" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="50" y="14" width="1" height="1" fill="#403845" opacity="0.06"/>
+      <rect x="49" y="15" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="51" y="15" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="50" y="16" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="6" y="22" width="3" height="1" fill="#403845" opacity="0.06"/>
+      <rect x="7" y="21" width="1" height="3" fill="#403845" opacity="0.05"/>
+      <rect x="38" y="58" width="1" height="3" fill="#403845" opacity="0.06"/>
+      <rect x="37" y="59" width="3" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="38" y="60" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="22" y="42" width="1" height="1" fill="#403845" opacity="0.05"/>
+      <rect x="21" y="43" width="3" height="1" fill="#403845" opacity="0.04"/>
+      <rect x="22" y="44" width="1" height="1" fill="#403845" opacity="0.04"/>
+    </pattern>
+  </defs>
+  <rect width="64" height="64" fill="url(#parchment)"/>
+</svg>
