@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 841.89 595.28] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1492 >>
+stream
+BT /F2 11 Tf ET
+BT 1 0 0 1 36 553.28 Tm (BOOKNEST — LIBRARY EXPORT) Tj ET
+BT /F1 8 Tf ET
+BT 1 0 0 1 685.89 553.28 Tm (2026-09-02 13:29) Tj ET
+0.4 0.35 0.4 RG 0.8 w 36 541.28 m 805.89 541.28 l S
+BT /F2 14 Tf ET
+BT 1 0 0 1 36 527.28 Tm (Test catalogo) Tj ET
+BT /F1 9 Tf ET
+BT 1 0 0 1 36 509.28 Tm (3 volumenes) Tj ET
+BT /F2 8 Tf ET
+q 0.85 0.80 0.90 rg 36 492.28 708 12 re f Q
+BT 1 0 0 1 38 495.28 Tm (#) Tj ET
+BT 1 0 0 1 66 495.28 Tm (Titulo) Tj ET
+BT 1 0 0 1 286 495.28 Tm (Autor) Tj ET
+BT 1 0 0 1 436 495.28 Tm (Editorial) Tj ET
+BT 1 0 0 1 506 495.28 Tm (Ano) Tj ET
+BT 1 0 0 1 546 495.28 Tm (Pag.) Tj ET
+BT 1 0 0 1 586 495.28 Tm (Idioma) Tj ET
+BT 1 0 0 1 656 495.28 Tm (Estado) Tj ET
+BT /F1 8 Tf ET
+BT 1 0 0 1 38 482.28 Tm (1) Tj ET
+BT 1 0 0 1 66 482.28 Tm (1984) Tj ET
+BT 1 0 0 1 286 482.28 Tm (George Orwell) Tj ET
+BT 1 0 0 1 436 482.28 Tm (Secker) Tj ET
+BT 1 0 0 1 506 482.28 Tm (1949) Tj ET
+BT 1 0 0 1 546 482.28 Tm (328) Tj ET
+BT 1 0 0 1 586 482.28 Tm (English) Tj ET
+BT 1 0 0 1 656 482.28 Tm (Leido) Tj ET
+q 0.96 0.93 0.88 rg 36 466.28 708 12 re f Q
+BT 1 0 0 1 38 469.28 Tm (2) Tj ET
+BT 1 0 0 1 66 469.28 Tm (Neuromancer) Tj ET
+BT 1 0 0 1 286 469.28 Tm (William Gibson) Tj ET
+BT 1 0 0 1 436 469.28 Tm (Ace) Tj ET
+BT 1 0 0 1 506 469.28 Tm (1984) Tj ET
+BT 1 0 0 1 546 469.28 Tm (271) Tj ET
+BT 1 0 0 1 586 469.28 Tm (English) Tj ET
+BT 1 0 0 1 656 469.28 Tm (No leido) Tj ET
+BT /F1 8 Tf 1 0 0 1 36 22 Tm (BookNest personal library) Tj ET
+BT /F1 8 Tf 1 0 0 1 745.89 22 Tm (Page 1 / 1) Tj ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000257 00000 n 
+0000001801 00000 n 
+0000001898 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2000
+%%EOF

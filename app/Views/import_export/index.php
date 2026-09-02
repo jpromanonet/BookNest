@@ -9,6 +9,7 @@
                 <div class="actions">
                     <a class="btn btn-primary" href="<?= e(url('/exportar/json')) ?>">Export JSON</a>
                     <a class="btn btn-secondary" href="<?= e(url('/exportar/csv')) ?>">Export CSV</a>
+                    <a class="btn btn-magic" href="<?= e(url('/exportar/pdf')) ?>">Export PDF</a>
                 </div>
             </section>
 

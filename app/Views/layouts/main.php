@@ -26,19 +26,23 @@ $flashes = take_flashes();
 <body>
 <div class="app-shell">
     <header class="topbar">
-        <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Menú" aria-expanded="false"><?= icon('library', 18) ?></button>
-        <a class="topbar-brand brand" href="<?= e(url('/')) ?>">
-            <?= icon('nest', 22) ?>
-            <span class="brand-text">BOOKNEST</span>
-        </a>
-        <div class="topbar-search">
-            <form class="global-search" action="<?= e(url('/buscar')) ?>" method="get">
-                <input type="search" name="q" id="global-search" placeholder="Buscar en los archivos…" value="<?= e($_GET['q'] ?? '') ?>" data-url="<?= e(url('/buscar')) ?>" autocomplete="off">
-            </form>
+        <div class="topbar-brand-zone">
+            <button type="button" class="sidebar-toggle" id="sidebar-toggle" aria-label="Menú" aria-expanded="false"><?= icon('library', 18) ?></button>
+            <a class="topbar-brand brand" href="<?= e(url('/')) ?>">
+                <?= icon('nest', 22) ?>
+                <span class="brand-text">BOOKNEST</span>
+            </a>
         </div>
-        <div class="topbar-actions">
-            <span class="meta-pill"><?= format_number($bookCount) ?> BOOKS</span>
-            <a class="icon-btn" href="<?= e(url('/configuracion')) ?>" title="Configuración"><?= icon('settings', 18) ?></a>
+        <div class="topbar-main">
+            <div class="topbar-search">
+                <form class="global-search" action="<?= e(url('/buscar')) ?>" method="get">
+                    <input type="search" name="q" id="global-search" placeholder="Buscar en los archivos…" value="<?= e($_GET['q'] ?? '') ?>" data-url="<?= e(url('/buscar')) ?>" autocomplete="off">
+                </form>
+            </div>
+            <div class="topbar-actions">
+                <span class="meta-pill"><?= format_number($bookCount) ?> BOOKS</span>
+                <a class="icon-btn" href="<?= e(url('/configuracion')) ?>" title="Configuración"><?= icon('settings', 18) ?></a>
+            </div>
         </div>
     </header>
 
@@ -50,6 +54,7 @@ $flashes = take_flashes();
             <a class="<?= e(nav_active('/colecciones')) ?>" href="<?= e(url('/colecciones')) ?>"><?= icon('collection') ?> Colecciones</a>
             <a class="<?= e(nav_active('/wishlist')) ?>" href="<?= e(url('/wishlist')) ?>"><?= icon('wishlist') ?> Wishlist</a>
             <a class="<?= e(nav_active('/estadisticas')) ?>" href="<?= e(url('/estadisticas')) ?>"><?= icon('statistics') ?> Estadísticas</a>
+            <a class="<?= e(nav_active('/perfil')) ?>" href="<?= e(url('/perfil')) ?>"><?= icon('profile') ?> Perfil lector</a>
             <a class="<?= e(nav_active('/importar-exportar')) ?>" href="<?= e(url('/importar-exportar')) ?>"><?= icon('import') ?> Importar / Exportar</a>
             <a class="<?= e(nav_active('/configuracion')) ?>" href="<?= e(url('/configuracion')) ?>"><?= icon('settings') ?> Configuración</a>
         </nav>
@@ -73,6 +78,9 @@ $flashes = take_flashes();
         <span><?= e(strtoupper((string) ($title ?? 'ARCHIVE'))) ?></span>
     </footer>
 </div>
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Volver arriba" title="Volver arriba" hidden>
+    <?= icon('up', 18) ?>
+</button>
 <script src="<?= e(url('/assets/js/chart.umd.min.js')) ?>"></script>
 <script src="<?= e(url('/assets/js/app.js')) ?>?v=<?= (int) @filemtime(dirname(__DIR__, 3) . '/assets/js/app.js') ?>"></script>
 </body>

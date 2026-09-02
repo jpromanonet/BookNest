@@ -26,6 +26,8 @@ require_once __DIR__ . '/Services/StatsService.php';
 require_once __DIR__ . '/Services/WishlistService.php';
 require_once __DIR__ . '/Services/ImportExportService.php';
 require_once __DIR__ . '/Services/GoodreadsService.php';
+require_once __DIR__ . '/Services/ReaderProfileService.php';
+require_once __DIR__ . '/Services/SimpleListPdf.php';
 
 foreach ([
     'DashboardController',
@@ -38,6 +40,7 @@ foreach ([
     'SettingsController',
     'SearchController',
     'GoodreadsController',
+    'ProfileController',
 ] as $controller) {
     require_once __DIR__ . '/Controllers/' . $controller . '.php';
 }

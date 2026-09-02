@@ -833,6 +833,129 @@
   }
 
   /* -----------------------------------------------------------------------
+     Quick reading status (library table)
+     ----------------------------------------------------------------------- */
+
+  var STATUS_BADGE = {
+    unread: 'badge-parchment',
+    reading: 'badge-blue',
+    read: 'badge-sage',
+    abandoned: 'badge-rose',
+    reread: 'badge-lavender',
+  };
+
+  function applyStatusBadgeClass(select, status) {
+    Object.keys(STATUS_BADGE).forEach(function (key) {
+      select.classList.remove(STATUS_BADGE[key]);
+    });
+    select.classList.add(STATUS_BADGE[status] || 'badge-parchment');
+  }
+
+  function initStatusSelects() {
+    $$('[data-status-select]').forEach(function (select) {
+      select.addEventListener('change', function () {
+        var url = select.getAttribute('data-url');
+        var csrf = select.getAttribute('data-csrf') || '';
+        var previous = select.getAttribute('data-previous') || select.value;
+        var status = select.value;
+
+        if (!url) {
+          return;
+        }
+
+        select.disabled = true;
+        select.classList.add('is-saving');
+
+        var body = new FormData();
+        body.append('_csrf', csrf);
+        body.append('reading_status', status);
+
+        fetch(url, {
+          method: 'POST',
+          body: body,
+          credentials: 'same-origin',
+          headers: {
+            Accept: 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+          },
+        })
+          .then(function (res) {
+            return res.json().then(function (data) {
+              if (!res.ok || !data.ok) {
+                throw new Error((data && data.error) || 'No se pudo actualizar el estado.');
+              }
+              return data;
+            });
+          })
+          .then(function (data) {
+            select.setAttribute('data-previous', data.reading_status);
+            applyStatusBadgeClass(select, data.reading_status);
+          })
+          .catch(function (err) {
+            select.value = previous;
+            applyStatusBadgeClass(select, previous);
+            window.alert(err.message || 'Error al cambiar el estado.');
+          })
+          .finally(function () {
+            select.disabled = false;
+            select.classList.remove('is-saving');
+          });
+      });
+    });
+  }
+
+  /* -----------------------------------------------------------------------
+     Back to top
+     ----------------------------------------------------------------------- */
+
+  function initBackToTop() {
+    var btn = $('#back-to-top');
+    if (!btn) {
+      return;
+    }
+
+    var scroller = $('.content') || document.documentElement;
+    var threshold = 240;
+
+    function scrollTopValue() {
+      if (scroller === document.documentElement || scroller === document.body) {
+        return window.pageYOffset || document.documentElement.scrollTop || 0;
+      }
+      return scroller.scrollTop || 0;
+    }
+
+    function update() {
+      if (scrollTopValue() > threshold) {
+        btn.hidden = false;
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+        btn.hidden = true;
+      }
+    }
+
+    function goTop() {
+      if (scroller === document.documentElement || scroller === document.body) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (typeof scroller.scrollTo === 'function') {
+        scroller.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        scroller.scrollTop = 0;
+      }
+    }
+
+    btn.addEventListener('click', goTop);
+
+    if (scroller === document.documentElement || scroller === document.body) {
+      window.addEventListener('scroll', update, { passive: true });
+    } else {
+      scroller.addEventListener('scroll', update, { passive: true });
+    }
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  }
+
+  /* -----------------------------------------------------------------------
      Boot
      ----------------------------------------------------------------------- */
 
@@ -844,10 +967,12 @@
     initGlobalSearch();
     initGoodreadsSeek();
     initGoodreadsEnrich();
+    initStatusSelects();
     initCharts();
     initFlashDismiss();
     initModals();
     initProgressBars();
+    initBackToTop();
   }
 
   if (document.readyState === 'loading') {

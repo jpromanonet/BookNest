@@ -295,6 +295,12 @@ final class BookService
         $stmt->execute([$id]);
     }
 
+    public static function updateReadingStatus(int $id, string $status): void
+    {
+        $stmt = Database::pdo()->prepare('UPDATE books SET reading_status = ? WHERE id = ?');
+        $stmt->execute([$status, $id]);
+    }
+
     private static function bindBook(array $data): array
     {
         return [

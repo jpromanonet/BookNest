@@ -1,8 +1,13 @@
-<div class="window character-sheet">
-    <div class="window-title">
-        <span><?= icon('book') ?> <?= e(strtoupper($book['title'])) ?></span>
-        <div class="actions">
-            <a class="btn btn-secondary" href="<?= e(url('/biblioteca/' . $book['id'] . '/editar')) ?>"><?= icon('edit') ?> EDIT</a>
+<div class="window book-sheet">
+    <div class="window-title book-sheet-title">
+        <div class="book-sheet-heading">
+            <span class="book-sheet-icon"><?= icon('book', 22) ?></span>
+            <h1 class="book-sheet-name"><?= e($book['title']) ?></h1>
+        </div>
+        <div class="actions book-sheet-actions">
+            <a class="btn btn-edit" href="<?= e(url('/biblioteca/' . $book['id'] . '/editar')) ?>">
+                <?= icon('edit') ?> EDIT
+            </a>
             <form method="post" action="<?= e(url('/biblioteca/' . $book['id'] . '/eliminar')) ?>" data-confirm="¿Eliminar «<?= e($book['title']) ?>»?">
                 <?= csrf_field() ?>
                 <button class="btn btn-danger" type="submit"><?= icon('delete') ?> DELETE</button>
@@ -10,6 +15,10 @@
         </div>
     </div>
     <div class="window-body">
+        <?php if ($book['subtitle']): ?>
+            <p class="sheet-subtitle"><?= e($book['subtitle']) ?></p>
+        <?php endif; ?>
+
         <div class="sheet-grid">
             <div class="sheet-cover">
                 <img src="<?= e(cover_url($book['cover'] ?? null)) ?>" alt="Portada de <?= e($book['title']) ?>">
@@ -31,10 +40,6 @@
                 <div class="sheet-row"><span>VALUE</span><strong><?= format_money($book['estimated_value'] !== null ? (float)$book['estimated_value'] : null) ?></strong></div>
             </div>
         </div>
-
-        <?php if ($book['subtitle']): ?>
-            <p class="sheet-subtitle"><?= e($book['subtitle']) ?></p>
-        <?php endif; ?>
 
         <?php if ($book['genres_text'] || $book['tags_text']): ?>
             <div class="chip-row">

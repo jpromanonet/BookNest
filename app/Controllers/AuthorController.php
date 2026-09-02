@@ -6,9 +6,12 @@ final class AuthorController
 {
     public static function index(): void
     {
+        $page = max(1, (int) ($_GET['page'] ?? 1));
+        $q = trim((string) ($_GET['q'] ?? ''));
+        $result = AuthorService::paginate($page, 20, $q);
         view('authors/index', [
             'title' => 'Autores',
-            'authors' => AuthorService::all(),
+            'result' => $result,
         ]);
     }
 

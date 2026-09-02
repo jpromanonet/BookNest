@@ -5,9 +5,9 @@
             <div class="stat-block tint-lavender"><div class="stat-value"><?= format_number($stats['books']) ?></div><div class="stat-label">BOOKS</div></div>
             <div class="stat-block tint-peach"><div class="stat-value"><?= format_number($stats['pages']) ?></div><div class="stat-label">PAGES</div></div>
             <div class="stat-block tint-gold"><div class="stat-value"><?= format_number($stats['authors']) ?></div><div class="stat-label">AUTHORS</div></div>
-            <div class="stat-block tint-sage"><div class="stat-value"><?= format_number($stats['read']) ?></div><div class="stat-label">READ</div></div>
-            <div class="stat-block tint-parchment"><div class="stat-value"><?= format_number($stats['unread']) ?></div><div class="stat-label">UNREAD</div></div>
-            <div class="stat-block tint-blue"><div class="stat-value"><?= format_number($stats['reading']) ?></div><div class="stat-label">READING</div></div>
+            <div class="stat-block tint-sage"><div class="stat-value"><?= format_number($stats['read']) ?></div><div class="stat-label">READ</div><div class="stat-sub"><?= (int) $stats['pct_read'] ?>%</div></div>
+            <div class="stat-block tint-parchment"><div class="stat-value"><?= format_number($stats['unread']) ?></div><div class="stat-label">UNREAD</div><div class="stat-sub"><?= (int) $stats['pct_unread'] ?>%</div></div>
+            <div class="stat-block tint-blue"><div class="stat-value"><?= format_number($stats['reading']) ?></div><div class="stat-label">READING</div><div class="stat-sub"><?= (int) $stats['pct_reading'] ?>%</div></div>
             <div class="stat-block tint-sage"><div class="stat-value"><?= format_number($stats['pages_read']) ?></div><div class="stat-label">PAGES READ</div></div>
             <div class="stat-block tint-rose"><div class="stat-value"><?= format_number($stats['pages_pending']) ?></div><div class="stat-label">PAGES PENDING</div></div>
             <div class="stat-block tint-blue"><div class="stat-value"><?= format_number($stats['avg_pages']) ?></div><div class="stat-label">AVG PAGES</div></div>

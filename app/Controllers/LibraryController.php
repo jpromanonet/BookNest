@@ -120,6 +120,30 @@ final class LibraryController
         redirect('/biblioteca');
     }
 
+    public static function updateStatus(string $id): void
+    {
+        require_csrf();
+        $status = (string) ($_POST['reading_status'] ?? '');
+        $allowed = array_keys(reading_statuses());
+        if (!in_array($status, $allowed, true)) {
+            json_response(['ok' => false, 'error' => 'Estado inválido.'], 422);
+        }
+
+        $book = BookService::find((int) $id);
+        if (!$book) {
+            json_response(['ok' => false, 'error' => 'Libro no encontrado.'], 404);
+        }
+
+        BookService::updateReadingStatus((int) $id, $status);
+        json_response([
+            'ok' => true,
+            'id' => (int) $id,
+            'reading_status' => $status,
+            'label' => status_label($status),
+            'badge_class' => status_badge_class($status),
+        ]);
+    }
+
     private static function fromRequest(): array
     {
         return [

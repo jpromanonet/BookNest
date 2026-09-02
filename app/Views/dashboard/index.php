@@ -20,14 +20,17 @@
             <div class="stat-block tint-sage">
                 <div class="stat-value"><?= format_number($stats['read']) ?></div>
                 <div class="stat-label">READ</div>
+                <div class="stat-sub"><?= (int) $stats['pct_read'] ?>%</div>
             </div>
             <div class="stat-block tint-parchment">
                 <div class="stat-value"><?= format_number($stats['unread']) ?></div>
                 <div class="stat-label">UNREAD</div>
+                <div class="stat-sub"><?= (int) $stats['pct_unread'] ?>%</div>
             </div>
             <div class="stat-block tint-blue">
                 <div class="stat-value"><?= format_number($stats['reading']) ?></div>
                 <div class="stat-label">READING</div>
+                <div class="stat-sub"><?= (int) $stats['pct_reading'] ?>%</div>
             </div>
             <div class="stat-block tint-gold">
                 <div class="stat-value"><?= format_money($stats['estimated_value']) ?></div>
@@ -48,9 +51,13 @@
                 <span class="progress-pct"><?= (int) $stats['progress'] ?>%</span>
             </div>
             <p class="muted mt-2">
-                <?= format_number($stats['pages_read']) ?> páginas leídas ·
-                <?= format_number($stats['pages_pending']) ?> pendientes ·
-                promedio <?= format_number($stats['avg_pages']) ?> págs/libro
+                <?= (int) $stats['progress'] ?>% del archive recorrido ·
+                <?= (int) $stats['pct_read'] ?>% leídos ·
+                <?= (int) $stats['pct_unread'] ?>% pendientes ·
+                <?= format_number($stats['pages_read']) ?> páginas leídas
+            </p>
+            <p class="mt-3">
+                <a class="btn btn-magic" href="<?= e(url('/perfil')) ?>"><?= icon('profile') ?> VER PERFIL LECTOR</a>
             </p>
         </section>
 

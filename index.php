@@ -14,6 +14,7 @@ $router->post('/biblioteca', [LibraryController::class, 'store']);
 $router->get('/biblioteca/{id}', [LibraryController::class, 'show']);
 $router->get('/biblioteca/{id}/editar', [LibraryController::class, 'edit']);
 $router->post('/biblioteca/{id}', [LibraryController::class, 'update']);
+$router->post('/biblioteca/{id}/status', [LibraryController::class, 'updateStatus']);
 $router->post('/biblioteca/{id}/eliminar', [LibraryController::class, 'destroy']);
 
 $router->get('/autores', [AuthorController::class, 'index']);
@@ -41,10 +42,12 @@ $router->post('/wishlist/{id}/eliminar', [WishlistController::class, 'destroy'])
 $router->post('/wishlist/{id}/mover', [WishlistController::class, 'move']);
 
 $router->get('/estadisticas', [StatisticsController::class, 'index']);
+$router->get('/perfil', [ProfileController::class, 'index']);
 
 $router->get('/importar-exportar', [ImportExportController::class, 'index']);
 $router->get('/exportar/json', [ImportExportController::class, 'exportJson']);
 $router->get('/exportar/csv', [ImportExportController::class, 'exportCsv']);
+$router->get('/exportar/pdf', [ImportExportController::class, 'exportPdf']);
 $router->post('/importar', [ImportExportController::class, 'import']);
 
 $router->get('/configuracion', [SettingsController::class, 'index']);

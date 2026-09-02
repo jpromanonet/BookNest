@@ -31,6 +31,49 @@ final class AuthorService
         )->fetchAll();
     }
 
+    public static function paginate(int $page = 1, int $perPage = 20, string $q = ''): array
+    {
+        $pdo = Database::pdo();
+        $page = max(1, $page);
+        $perPage = max(5, min(100, $perPage));
+        $where = '1=1';
+        $params = [];
+        $q = trim($q);
+        if ($q !== '') {
+            $where = '(a.name LIKE ? OR a.nationality LIKE ?)';
+            $like = '%' . $q . '%';
+            $params = [$like, $like];
+        }
+
+        $countStmt = $pdo->prepare("SELECT COUNT(*) FROM authors a WHERE {$where}");
+        $countStmt->execute($params);
+        $total = (int) $countStmt->fetchColumn();
+        $pages = max(1, (int) ceil($total / $perPage));
+        if ($page > $pages) {
+            $page = $pages;
+        }
+        $offset = ($page - 1) * $perPage;
+
+        $stmt = $pdo->prepare(
+            "SELECT a.*,
+                (SELECT COUNT(*) FROM book_authors ba WHERE ba.author_id = a.id) AS book_count
+             FROM authors a
+             WHERE {$where}
+             ORDER BY a.name
+             LIMIT {$perPage} OFFSET {$offset}"
+        );
+        $stmt->execute($params);
+
+        return [
+            'items' => $stmt->fetchAll(),
+            'total' => $total,
+            'page' => $page,
+            'per_page' => $perPage,
+            'pages' => $pages,
+            'q' => $q,
+        ];
+    }
+
     public static function find(int $id): ?array
     {
         $stmt = Database::pdo()->prepare(

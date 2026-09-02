@@ -70,6 +70,48 @@ final class ImportExportService
         return $csv;
     }
 
+    public static function exportPdf(): void
+    {
+        $pdo = Database::pdo();
+        $books = $pdo->query(
+            "SELECT b.*, p.name AS publisher_name,
+                (SELECT GROUP_CONCAT(a.name ORDER BY ba.sort_order, a.name SEPARATOR ', ')
+                 FROM book_authors ba INNER JOIN authors a ON a.id = ba.author_id
+                 WHERE ba.book_id = b.id) AS author_names
+             FROM books b
+             LEFT JOIN publishers p ON p.id = b.publisher_id
+             ORDER BY b.title ASC"
+        )->fetchAll();
+
+        $pdf = new SimpleListPdf();
+        $pdf->title('Catalogo completo de la biblioteca');
+        $pdf->subtitle(count($books) . ' volumenes · generado ' . date('d/m/Y H:i'));
+        $pdf->blank(6);
+
+        $widths = [28, 220, 150, 70, 40, 40, 70, 90];
+        $pdf->headerRow(
+            ['#', 'Titulo', 'Autor', 'Editorial', 'Ano', 'Pag.', 'Idioma', 'Estado'],
+            $widths
+        );
+
+        $i = 1;
+        foreach ($books as $book) {
+            $pdf->dataRow([
+                (string) $i,
+                (string) ($book['title'] ?? ''),
+                (string) ($book['author_names'] ?? '—'),
+                (string) ($book['publisher_name'] ?? '—'),
+                (string) ($book['publication_year'] ?? '—'),
+                (string) ($book['pages'] ?? '—'),
+                (string) ($book['language'] ?? '—'),
+                status_label((string) ($book['reading_status'] ?? 'unread')),
+            ], $widths);
+            $i++;
+        }
+
+        $pdf->output('booknest-library-' . date('Ymd-His') . '.pdf');
+    }
+
     public static function importJson(string $json, bool $replace = false): array
     {
         $data = json_decode($json, true);

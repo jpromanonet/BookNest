@@ -160,7 +160,23 @@ $windowEnd = min($pages, $page + 4);
                             <td><?= e($book['isbn13'] ?: ($book['isbn10'] ?: '—')) ?></td>
                             <td><?= e($book['genre_names'] ?? '—') ?></td>
                             <td><?= e((string) ($book['pages'] ?? '—')) ?></td>
-                            <td><span class="badge <?= e(status_badge_class($book['reading_status'])) ?>">[ <?= e(strtoupper(status_label($book['reading_status']))) ?> ]</span></td>
+                            <td>
+                                <select
+                                    class="status-select <?= e(status_badge_class($book['reading_status'])) ?>"
+                                    data-status-select
+                                    data-url="<?= e(url('/biblioteca/' . $book['id'] . '/status')) ?>"
+                                    data-csrf="<?= e(csrf_token()) ?>"
+                                    data-previous="<?= e($book['reading_status']) ?>"
+                                    title="Cambiar estado de lectura"
+                                    aria-label="Estado de lectura de <?= e($book['title']) ?>"
+                                >
+                                    <?php foreach (reading_statuses() as $k => $label): ?>
+                                        <option value="<?= e($k) ?>" <?= $book['reading_status'] === $k ? 'selected' : '' ?>>
+                                            <?= e(strtoupper($label)) ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </td>
                             <td class="actions-cell">
                                 <a class="icon-btn" href="<?= e(url('/biblioteca/' . $book['id'] . '/editar')) ?>" title="Editar"><?= icon('edit') ?></a>
                                 <form method="post" action="<?= e(url('/biblioteca/' . $book['id'] . '/eliminar')) ?>" data-confirm="¿Eliminar «<?= e($book['title']) ?>»?">

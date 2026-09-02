@@ -30,6 +30,11 @@ final class ImportExportController
         exit;
     }
 
+    public static function exportPdf(): void
+    {
+        ImportExportService::exportPdf();
+    }
+
     public static function import(): void
     {
         require_csrf();

@@ -33,8 +33,14 @@ final class StatsService
         $wishlist = (int) $pdo->query('SELECT COUNT(*) FROM wishlist')->fetchColumn();
 
         $books = (int) ($totals['books'] ?? 0);
-        $read = (int) ($totals['read_count'] ?? 0) + (int) ($totals['reread_count'] ?? 0);
+        $readOnly = (int) ($totals['read_count'] ?? 0);
+        $unread = (int) ($totals['unread_count'] ?? 0);
+        $reading = (int) ($totals['reading_count'] ?? 0);
+        $abandoned = (int) ($totals['abandoned_count'] ?? 0);
+        $reread = (int) ($totals['reread_count'] ?? 0);
+        $read = $readOnly + $reread;
         $progress = $books > 0 ? (int) round(($read / $books) * 100) : 0;
+        $pct = static fn (int $n): int => $books > 0 ? (int) round(($n / $books) * 100) : 0;
 
         return [
             'books' => $books,
@@ -45,11 +51,16 @@ final class StatsService
             'collections' => $collections,
             'series' => $series,
             'wishlist' => $wishlist,
-            'read' => (int) ($totals['read_count'] ?? 0),
-            'unread' => (int) ($totals['unread_count'] ?? 0),
-            'reading' => (int) ($totals['reading_count'] ?? 0),
-            'abandoned' => (int) ($totals['abandoned_count'] ?? 0),
-            'reread' => (int) ($totals['reread_count'] ?? 0),
+            'read' => $readOnly,
+            'unread' => $unread,
+            'reading' => $reading,
+            'abandoned' => $abandoned,
+            'reread' => $reread,
+            'pct_read' => $pct($readOnly),
+            'pct_unread' => $pct($unread),
+            'pct_reading' => $pct($reading),
+            'pct_abandoned' => $pct($abandoned),
+            'pct_reread' => $pct($reread),
             'estimated_value' => (float) ($totals['estimated_value'] ?? 0),
             'avg_price' => (float) ($totals['avg_price'] ?? 0),
             'without_isbn' => (int) ($totals['without_isbn'] ?? 0),
